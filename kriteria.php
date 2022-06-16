@@ -51,8 +51,8 @@ $kon=mysqli_connect("localhost","root","","ahp");
         <td><?php echo $rkriteria['KodeKriteria'];?></td>
         <td><?php echo $rkriteria['NamaKriteria'];?></td>
         <td>
-		<button type="submit" class="btn btn-primary" name="BKoreksi">Koreksi</button>
-		<button type="submit" class="btn btn-danger" name="BHapus">Hapus</button>
+		<button type="submit" class="btn btn-primary" name="BKoreksi" onclick="window.location.href='koreksikriteria.php?a=edt&id=<?php echo $rkriteria['KodeKriteria'];?>'">Koreksi</button>
+		<button type="submit" class="btn btn-danger" name="BHapus" onclick="window.location.href='hapuskriteria.php?a=del&id=<?php echo $rkriteria['KodeKriteria'];?>'"<?php echo $rkriteria['KodeKriteria'];?>">Hapus</button>
 		</td>
       </tr>
 <?php 
@@ -81,4 +81,7 @@ $kon=mysqli_connect("localhost","root","","ahp");
 </div>';
 	}
  echo "<script>window.location.href='kriteria.php';</script>";
+}
+if (isset($_POST['BKoreksi'])) {
+	echo $_POST['BKoreksi'];
 }
