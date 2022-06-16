@@ -18,22 +18,22 @@
     <div class="collapse navbar-collapse" id="mynavbar">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Beranda</a>
+          <a class="nav-link" href="beranda.php" target="frmmutama">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Kriteria</a>
+          <a class="nav-link" href="kriteria.php" target="frmmutama">Kriteria</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Nilai Kriteria</a>
+          <a class="nav-link" href="nilaikriteria.php" target="frmmutama">Nilai Kriteria</a>
         </li>
 		<li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Alternatif</a>
+          <a class="nav-link" href="alternatif.php" target="frmmutama">Alternatif</a>
         </li>
 		<li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Nilai Alternatif</a>
+          <a class="nav-link" href="nilaialternatif.php" target="frmmutama">Nilai Alternatif</a>
         </li>
 		<li class="nav-item">
-          <a class="nav-link" href="javascript:void(0)">Perhitungan AHP</a>
+          <a class="nav-link" href="perhitunganahp.php" target="frmmutama">Perhitungan AHP</a>
         </li>
       </ul>
       <form class="d-flex">
