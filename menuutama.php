@@ -43,6 +43,9 @@ if (empty($_SESSION['cek'])) {
           <a class="nav-link" href="perhitunganahp.php" target="frmmutama">Perhitungan AHP</a>
         </li>
 		<li class="nav-item">
+          <a class="nav-link" href="aturpengguna.php" target="frmmutama">Atur Pengguna</a>
+        </li>
+		<li class="nav-item">
           <a class="nav-link" href="logout.php">Log out</a>
         </li>
       </ul>
