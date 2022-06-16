@@ -35,7 +35,8 @@
 	 $r=mysqli_fetch_array($q);
 	 if (!empty($r)) {
 		 if (!isset($_SESSION)) session_start();
-		 $_SESSION['cek']=date('YmDHis');
+		 $sessionname='ahp'.date('YmD');
+		 $_SESSION[$sessionname]=date('YmDHis');
 		 echo "<script>window.location.href='menuutama.php';</script>";
 	 } else {
 		 echo '<div class="alert alert-danger alert-dismissible">
