@@ -22,7 +22,7 @@ $kon=mysqli_connect("localhost","root","","ahp");
   <form action="" method="post">
     <div class="mb-3 mt-3">
       <label for="NamaPengguna">Nama Kriteria:</label>
-      <input type="text" class="form-control" id="NamaKriteria" placeholder="Enter Nama kriteria keputusannya" name="NamaKriteria" autocomplete="off" required>
+      <input type="text" class="form-control" id="NamaKriteria" placeholder="Enter Nama kriteria keputusannya" name="NamaKriteria" autocomplete="on" required>
     </div>
 	<button type="submit" class="btn btn-primary" name="BSimpan">Simpan</button>
   </form>
@@ -52,7 +52,7 @@ $kon=mysqli_connect("localhost","root","","ahp");
         <td><?php echo $rkriteria['NamaKriteria'];?></td>
         <td>
 		<button type="submit" class="btn btn-primary" name="BKoreksi" onclick="window.location.href='koreksikriteria.php?a=edt&id=<?php echo $rkriteria['KodeKriteria'];?>'">Koreksi</button>
-		<button type="submit" class="btn btn-danger" name="BHapus" onclick="window.location.href='hapuskriteria.php?a=del&id=<?php echo $rkriteria['KodeKriteria'];?>'"<?php echo $rkriteria['KodeKriteria'];?>">Hapus</button>
+		<button type="submit" class="btn btn-danger" name="BHapus" onclick="if (confirm('Apakah yakin akan menghapus rekord ini ?')) window.location.href='hapuskriteria.php?a=del&id=<?php echo $rkriteria['KodeKriteria'];?>'"<?php echo $rkriteria['KodeKriteria'];?>">Hapus</button>
 		</td>
       </tr>
 <?php 
