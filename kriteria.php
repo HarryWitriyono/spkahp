@@ -13,8 +13,10 @@ $kon=mysqli_connect("localhost","root","","ahp");
   <title>Tabel Kriteria - SPK Metode AHP</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="bootstrap.min.css" rel="stylesheet">
-  <script src="bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 <body>
 <div class="container mt-3">
@@ -24,7 +26,7 @@ $kon=mysqli_connect("localhost","root","","ahp");
       <label for="NamaPengguna">Nama Kriteria:</label>
       <input type="text" class="form-control" id="NamaKriteria" placeholder="Enter Nama kriteria keputusannya" name="NamaKriteria" autocomplete="on" required>
     </div>
-	<button type="submit" class="btn btn-primary" name="BSimpan">Simpan</button>
+	<button type="submit" class="btn btn-primary" name="BSimpan"title="Simpan"><span class="material-icons">save</span></button>
   </form>
 </div>
 <div class="container mt-3">
@@ -51,8 +53,8 @@ $kon=mysqli_connect("localhost","root","","ahp");
         <td><?php echo $rkriteria['KodeKriteria'];?></td>
         <td><?php echo $rkriteria['NamaKriteria'];?></td>
         <td>
-		<button type="submit" class="btn btn-primary" name="BKoreksi" onclick="window.location.href='koreksikriteria.php?a=edt&id=<?php echo $rkriteria['KodeKriteria'];?>'">Koreksi</button>
-		<button type="submit" class="btn btn-danger" name="BHapus" onclick="if (confirm('Apakah yakin akan menghapus rekord ini ?')) window.location.href='hapuskriteria.php?a=del&id=<?php echo $rkriteria['KodeKriteria'];?>'"<?php echo $rkriteria['KodeKriteria'];?>">Hapus</button>
+		<button type="submit" class="btn btn-primary" name="BKoreksi" onclick="window.location.href='koreksikriteria.php?a=edt&id=<?php echo $rkriteria['KodeKriteria'];?>'" title="Koreksi"><span class="material-icons">edit</span></button>
+		<button type="submit" class="btn btn-danger" name="BHapus" onclick="if (confirm('Apakah yakin akan menghapus rekord ini ?')) window.location.href='hapuskriteria.php?a=del&id=<?php echo $rkriteria['KodeKriteria'];?>'"<?php echo $rkriteria['KodeKriteria'];?>" title="Hapus"><span class="material-icons">delete</span></button>
 		</td>
       </tr>
 <?php 
