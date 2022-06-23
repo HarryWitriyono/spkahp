@@ -1,6 +1,8 @@
+//fungsi ini digunakan untuk membuat file log yang dibutuhkan untuk proses forensik digital dikemudian hari.
+//sisikan function ini di file yang membutuhkan pencatatan/log aktifitas pengguna
 function debugLog($o) {
  $file_debug = 'log/' . 'debug-h2h-' . date("Y-m-d") . '.log'; 
- $file_bulan = 'log/' . 'logbnis' . date("Y-m") . '.log';
+ $file_bulan = 'log/' . 'logahp' . date("Y-m") . '.log';
  ob_start();
  var_dump($o);
  $c = ob_get_contents();
