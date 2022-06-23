@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 16, 2022 at 09:58 AM
+-- Generation Time: Jun 23, 2022 at 01:54 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.14
 
@@ -24,6 +24,29 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `alternatif`
+--
+
+CREATE TABLE `alternatif` (
+  `KodeAlternatif` int(11) NOT NULL,
+  `NamaAlternatif` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `alternatif`
+--
+
+INSERT INTO `alternatif` (`KodeAlternatif`, `NamaAlternatif`) VALUES
+(1, 'Andik Saputra'),
+(2, 'Bagus Venanda'),
+(3, 'Candra Pustpita Dewi'),
+(4, 'Dia Primasari'),
+(5, 'Eka Mulyani'),
+(6, 'Faishol Azizi');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `kriteria`
 --
 
@@ -39,7 +62,26 @@ CREATE TABLE `kriteria` (
 INSERT INTO `kriteria` (`KodeKriteria`, `NamaKriteria`) VALUES
 (1, 'Kemampuan Mengajar'),
 (2, 'Sikap'),
-(3, 'Jumlah Karya');
+(3, 'Jumlah Karya Ilmiah');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `nilaikriteria`
+--
+
+CREATE TABLE `nilaikriteria` (
+  `KodeKriteria1` int(11) NOT NULL,
+  `KodeKriteria2` int(11) NOT NULL,
+  `NilaiKriteria` double(5,2) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `nilaikriteria`
+--
+
+INSERT INTO `nilaikriteria` (`KodeKriteria1`, `KodeKriteria2`, `NilaiKriteria`) VALUES
+(1, 1, 1.00);
 
 -- --------------------------------------------------------
 
@@ -68,6 +110,12 @@ INSERT INTO `pengguna` (`NamaPengguna`, `NamaLengkap`, `Password`, `TanggalDafta
 --
 
 --
+-- Indexes for table `alternatif`
+--
+ALTER TABLE `alternatif`
+  ADD PRIMARY KEY (`KodeAlternatif`);
+
+--
 -- Indexes for table `kriteria`
 --
 ALTER TABLE `kriteria`
@@ -82,6 +130,12 @@ ALTER TABLE `pengguna`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `alternatif`
+--
+ALTER TABLE `alternatif`
+  MODIFY `KodeAlternatif` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `kriteria`
