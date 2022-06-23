@@ -1,6 +1,6 @@
 <?php 
 if (!isset($_SESSION)) session_start();
-$sessionname='ahp'.date('YmD');
+$sessionname='ahp'.date('Ymd');
 if (empty($_SESSION[$sessionname])) {
 	echo "<script>window.location.href='index.php';</script>";
 	exit();
