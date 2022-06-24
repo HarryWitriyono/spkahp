@@ -1,5 +1,5 @@
 # spkahp
-Ini contoh buat yang belajar Forensik Digital dan Sistem Pendukung Keputusan dengan Metode AHP
+Ini contoh buat yang belajar Forensik Digital dan Sistem Pendukung Keputusan dengan Metode AHP untuk contoh penentuan rangking pengajar yang sesuai kriteria.
 Untuk pelaksanaan praktikumnya :
 1. Install XAMPP terbaru bila belum
 2. Install Notepad ++ atau sejenisnya untuk mengetikkan kode programnya.
