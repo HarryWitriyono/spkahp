@@ -1,3 +1,4 @@
+<?php 
 //fungsi ini digunakan untuk membuat file log yang dibutuhkan untuk proses forensik digital dikemudian hari.
 //sisikan function ini di file yang membutuhkan pencatatan/log aktifitas pengguna
 function debugLog($o) {
@@ -20,3 +21,4 @@ function debugLog($o) {
  fclose($f);
  fclose($fbul);
 }
+?>
